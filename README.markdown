@@ -19,12 +19,14 @@ Import the Email and EmailParser classes.
 ```java
 import com.edlio.emailreplyparser.Email;
 import com.edlio.emailreplyparser.EmailParser;
+import com.edlio.emailreplyparser.EmailParserBuilder;
 ```
 
-Instantiate an `EmailParser` object and parse your email:
+Instantiate an `EmailParserBuilder` object and create an immutable thread safe parser:
 
 ``` java
-EmailParser parser = new EmailParser();
+EmailParserBuilder parserBuilder = new EmailParserBuilder();
+EmailParser parser = parserBuilder.build();
 Email email = parser.parse(emailString);
 ```
 
